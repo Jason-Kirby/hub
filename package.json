@@ -1,0 +1,19 @@
+{
+  "name": "hub",
+  "version": "1.0.0",
+  "description": "home website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jason-Kirby/hub.git"
+  },
+  "author": "Jason Kirby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jason-Kirby/hub/issues"
+  },
+  "homepage": "https://github.com/Jason-Kirby/hub#readme"
+}
