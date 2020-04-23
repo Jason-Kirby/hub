@@ -1,0 +1,215 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 56.25%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #E1D0A5;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #E1D0A5; }
+
+.heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0c499c;
+  letter-spacing: .2rem;
+  transition: all .2s; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+
+.heading-4 {
+  font-size: 1.9rem; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #433e31;
+  padding: 3rem; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
+
+.footer {
+  grid-column: fullstart / full-end;
+  grid-row: footer-start / footer-end; }
+
+.container {
+  display: grid;
+  grid-template-rows: [header-start] 70vh [header-end lead-start] 200px [lead-end resume-start] 200px 200px 200px [resume-end footer-start] 500px [footer-end];
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(12, min-content);
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 6rem calc(100vh - 6rem); } }
+
+.header {
+  background-color: #101d2c;
+  grid-column: full-start / full-end;
+  height: 75vh;
+  background-image: linear-gradient(to right bottom, rgba(16, 29, 44, 0.8), rgba(108, 170, 228, 0.8)), url(../../../src/img/building-houses.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 8rem;
+  clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+  text-align: center; }
+  .header__profile-box {
+    align-self: center; }
+  .header__profile {
+    height: 30rem;
+    border-radius: 100%; }
+  .header__text-box {
+    vertical-align: middle; }
+
+.resume-lead {
+  grid-column: full-start / full-end;
+  grid-row: lead-start / lead-end;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  color: #101d2c;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center; }
+  .resume-lead::before, .resume-lead::after {
+    content: "";
+    height: 1px;
+    margin: 2rem;
+    display: block;
+    background-color: currentColor; }
+
+.resume {
+  grid-column: center-start / center-end;
+  grid-row: resume-start / footer-start;
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-gap: 2rem;
+  grid-auto-flow: rows; }
+  .resume__company-card {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(228, 212, 174, 0.8);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: transform .3s;
+    padding: 2.5rem; }
+    .resume__company-card:hover {
+      transform: translateY(-1.5rem) scale(1.03); }
+  .resume__company-logo {
+    width: 5rem;
+    height: 5rem;
+    filter: brightness(70%);
+    align-self: center; }
+  .resume__role {
+    display: grid;
+    background-color: rgba(228, 212, 174, 0.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    grid-row-gap: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    transition: transform .3s; }
+    .resume__role:hover {
+      transform: translateY(-1.5rem) scale(1.03); }
+    .resume__role-accomplishments {
+      margin-left: 5rem; }
+
+.sidebar {
+  background-color: #2c1f10;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: header-start / footer-end;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.3rem); }

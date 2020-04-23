@@ -1,0 +1,42 @@
+[
+    {
+      "icon": "../img/mm-logo.png",
+      "title": "MagicMemories",
+      "subtitle": "Global Head of Product",
+      "period": "2018 - March 2020",
+      "location": "Sydney Australia (based out of California)",
+      "specialization": "ReactJS, Frontend Javascript Frameworks"
+    },
+    {
+      "icon": "../images/work/jk-logo.png",
+      "title": "IOT Security Stealth Startup",
+      "subtitle": "Consultant / Advisor",
+      "period": "2016 - 2018",
+      "location": "San Jose, California",
+      "specialization": "Angular, Node Python, Figma, Product Design"
+    },
+    {
+      "icon": "../images/work/betsol.png",
+      "title": "Cradlepoint – acquired Pertino",
+      "subtitle": "Senior Director, Product Management",
+      "period": "Jan '18 - Mar '18",
+      "location": "Bengaluru, India",
+      "specialization": "Full Stack Javascript, AngularJS, Node, MongoDB"
+    },
+    {
+      "icon": "../images/work/grabhouse.png",
+      "title": "Grabhouse Pvt. Ltd.",
+      "subtitle": "Web Developer Intern",
+      "period": "Jan '16 - Feb '16",
+      "location": "Bengaluru, India",
+      "specialization": "Python Scripting, Yii Framework (PHP), WordPress"
+    },
+    {
+      "icon": "../images/work/cognitive-clouds.png",
+      "title": "Cognitive Clouds Pvt. Ltd.",
+      "subtitle": "Visual Designer Intern",
+      "period": "Jan '14 - Feb '14",
+      "location": "Bengaluru, India",
+      "specialization": "Adobe Photoshop CC, Adobe Illustrator CC"
+    }
+  ]

@@ -1,0 +1,31 @@
+.header {
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+    height: 75vh;
+    background-image: linear-gradient(to right bottom, rgba($color-secondary, 0.8), rgba($sky-blue, 0.8))
+    ,url(../../../src/img/building-houses.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    padding-top: 8rem;
+    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+    text-align: center;
+
+
+    &__profile-box {
+        align-self: center;
+
+    }
+    &__profile {
+        height: 30rem;
+        border-radius: 100%;
+        
+    }
+
+    &__text-box {
+        vertical-align: middle
+        //position: absolute;
+        //grid-column: center-start / center-end;
+        //justify-self: center;
+    }
+}

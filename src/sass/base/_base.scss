@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size:56.25%;
+}
+
+body {
+    font-family: $font-primary;
+    color: $sandstone;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: $sandstone;
+}
+
