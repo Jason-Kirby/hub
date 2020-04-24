@@ -6,7 +6,7 @@
     color: $color-secondary;
     justify-self: center;
     align-self: center;
-    //text-shadow:  1px 1px 2px black; 
+    text-shadow:  1px 1px 2px black; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1.5rem;
@@ -26,23 +26,24 @@
 
 .resume {
     grid-column: center-start / center-end;
-    grid-row: resume-start / footer-start;
+    grid-row: resume-start / resume-end;
     
     //background-image: linear-gradient(to right bottom, rgba($sandstone, 0.8), rgba($warm-sand, 0.8)),url(../../../src/img/light-bulbs.png);
     //padding: 15rem 0;
     //margin-top: -20vh;
     //background-size: cover;
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: .25fr .75fr;
     //grid-template-rows: repeat (3, min content);
     grid-gap: 2rem;
     grid-auto-flow: rows;
 
         
     &__company-card {
-        display: flex;
+        display: grid;
         align-items: center;
         justify-items: center;
+        
         
         background-color: rgba(#e4d4ae, .8);
         //grid-column: 3;
@@ -52,6 +53,7 @@
         border-radius: 10px;
         transition: transform .3s;
         padding: 2.5rem;
+        font-size: 1.20rem;
         &:hover {
             transform: translateY(-1.5rem) scale(1.03);
         }
@@ -59,13 +61,16 @@
     &__company-logo {
         //grid-column: 1;
         //display: inline-block;
-        width: 5rem;
-        height: 5rem;
+        width: 10rem;
+        height: 10rem;
         filter: brightness(70%);
         align-self: center;
         
     }
-
+    .sub-bullet {
+        margin-left: 6rem;
+    }
+    
     &__role {
         display: grid;
         background-color: rgba(#e4d4ae, .8);
@@ -87,7 +92,11 @@
             
         }
         &-accomplishments {
-            margin-left: 5rem;
+            
+            margin-left: 2rem;
+        }
+        li:not(:last-child) {
+            margin-bottom: 5px;
         }
         }
 }

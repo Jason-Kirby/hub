@@ -1,7 +1,7 @@
 .container {
     display: grid;
-    grid-template-rows: [header-start] 70vh [header-end lead-start] 200px [lead-end resume-start] 200px 200px 200px [resume-end footer-start] 500px [footer-end];
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: [header-start] 70vh [header-end lead-start] 200px [lead-end resume-start] repeat(6, min-content) [resume-end footer-start] 10rem [footer-end];
+    grid-template-columns: [sidebar-start] 0rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
     @media only screen and (max-width: $bp-large) {
         grid-template-rows: 6rem 80vh min-content 40vw repeat(12, min-content);
