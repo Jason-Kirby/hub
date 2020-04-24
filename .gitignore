@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/sass/layout/navbar.scss
+/src/sass/layout/banner.scss
+/src/sass/layout/contact.scss
+
 
 # testing
 /coverage
