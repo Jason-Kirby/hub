@@ -1,47 +1,7 @@
-.temp__box {
-    top: 3rem;
-    left: 3rem;
-    z-index: 5000;
-    
-    
-    &-image {
+//headings
 
-        width: 15rem;
-    }
-}
-
-
-.header {
-    background-color: $color-secondary;
-    grid-column: full-start / full-end;
-    height: 75vh;
-    background-image: linear-gradient(to right bottom, rgba($color-secondary, 0.8), rgba($sky-blue, 0.8))
-    ,url(../../../src/img/building-houses.jpg);
-    border-radius: .75%;
-    background-size: cover;
-    background-position: top;
-    
-    padding-top: 5rem;
-    
-    clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
-    text-align: center;
-
-
-    &__profile-box {
-        align-self: center;
-
-    }
-    &__profile {
-        height: 30rem;
-        border-radius: 100%;
-        
-    }
-
-    &__text-box {
-        vertical-align: middle;
-        margin-bottom: 3rem;
-        //position: absolute;
-        //grid-column: center-start / center-end;
-        //justify-self: center;
-    }
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }

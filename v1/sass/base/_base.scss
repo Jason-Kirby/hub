@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    //@include respond (tab-land) {
+    //    font-size: 56.25%; //1rem=9px
+    //}
+
+    //@include respond (tab-port) {
+    //    font-size: 50%; //1rem=9px
+    //}
+
+    //@include respond (big-desktop) {
+     //   font-size: 75%; //1rem=12px
+    //}
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $sandstone;
+    padding: 3rem;
+    
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+

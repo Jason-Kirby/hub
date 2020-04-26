@@ -1,11 +1,34 @@
-//Primary Colors 
-$nami-blue: #0c499c;
-$ocean-blue: #0D1E32;
-$teal: #0099a8;
-$warm-blue: #68A19B;
-$cool-blue: #B5D9D7;
-$pear-green: #799900;
+//background color
+$primary-color: #323232;
+$secondary-color: #deba59;
 
+$coal: #323232;
+$background-opacity: 0.8;
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+$default-font-size: 1.6rem;
+$primary-font-color: #fff;
+$secondary-font-color: #e1d0a5; //sky-blue
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+//images
+$profile-image: url("/src/img/Jason-0001.jpg");
+$home-image: url("/src/img/building-houses.jpg");
+$show-home-image: true;
+
+$nami-blue: #0c499c;
+$ocean-blue: #0d1e32;
+$teal: #0099a8;
+$warm-blue: #68a19b;
+$cool-blue: #b5d9d7;
+$pear-green: #799900;
 
 //Complimentary Colors
 $sky-blue: #6caae4;
@@ -14,11 +37,11 @@ $orange: #ff661b;
 $dark-orange: #c13832;
 $yellow-orange: #f7a700;
 $brown: #513528;
-$warm-sand: #E2B478;
+$warm-sand: #e2b478;
 $sandstone-secondary: #a5b6e1;
 $sandstone-light: #f4eede;
-$sandstone: #E1D0A5;
-$coal: #323232;
+$sandstone: #e1d0a5;
+
 $grey: #7b7b7b;
 $silver: #c2c0c0;
 
@@ -26,7 +49,6 @@ $silver: #c2c0c0;
 $green-triad: #1c2c10;
 $brown-triad: #2c1f10;
 $purple-triad: #2c101d;
-
 
 //Programs Colors
 $purple: #6d287d;
@@ -41,36 +63,21 @@ $color-white: #fff;
 $color-black: #000;
 
 $color-sand-primary: #c69963;
-$color-sand-primary-accent: #B28451;
-$color-accent-dark-1: #54483A;
-$color-accent-dark-2: #6D5D4B;
+$color-sand-primary-accent: #b28451;
+$color-accent-dark-1: #54483a;
+$color-accent-dark-2: #6d5d4b;
 
 $color-secondary: #101d2c;
 
-
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
-$background-secondary: #F0F0F0;
+$background-secondary: #f0f0f0;
 
-
-$neutral-brown: #E0AF85;
-$rusty-brown: #563A38;
-$mossy-green: #A2B5A1;
-$light-lavender: #D9C9D3;
-$grey-brown: #C2B0B0;
+$neutral-brown: #e0af85;
+$rusty-brown: #563a38;
+$mossy-green: #a2b5a1;
+$light-lavender: #d9c9d3;
+$grey-brown: #c2b0b0;
 
 $color-secondary-light: #a5b6e1;
 $color-seceondary-dark: #8491b4;
-
-
-
-// FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
-
-
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em;   // 1200px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;

@@ -1,21 +1,43 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
-    font-size:56.25%;
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  //@media only screen and (max-width: $bp-largest) {
+  //  font-size: 50%;
+  //}
+
+  //@include respond (tab-land) {
+  //    font-size: 56.25%; //1rem=9px
+  //}
+
+  //@include respond (tab-port) {
+  //    font-size: 50%; //1rem=9px
+  //}
+
+  //@include respond (big-desktop) {
+  //   font-size: 75%; //1rem=12px
+  //}
 }
 
 body {
-    font-family: $font-primary;
-    color: $sandstone;
-    font-weight: 300;
-    line-height: 1.6;
-    background-color: $sandstone;
+  @include background;
+  //background-image: $home-image;
+  font-family: $font-primary;
+  background-color: $coal;
+  color: $primary-font-color;
+  padding: 3rem;
+  height: 100%;
+  margin: 0;
+  line-height: 1.7;
+  //@include respond(tab-port) {
+  //  padding: 0;
+  // }
 }
-
