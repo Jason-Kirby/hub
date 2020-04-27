@@ -13,6 +13,12 @@ h3 {
     //background: rgba(darken($primary-font-color, 2), 0.5);
   }
 }
+h3 {
+  color: #deba59;
+  font-weight: 700;
+  font-size: 105%;
+}
+
 a {
   text-decoration: none;
   color: $color-white;
@@ -21,4 +27,30 @@ a {
   color: #deba59;
   font-weight: 700;
   font-size: 105%;
+}
+
+h6 {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  float: left;
+}
+h4 {
+  float: right;
+  padding-right: 1rem;
+}
+h5 {
+  float: center;
+  padding-right: 40%;
+  padding-left: 40%;
+}
+ul {
+  padding: none;
+  width: 95%;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 1.5rem;
+}
+li {
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
 }

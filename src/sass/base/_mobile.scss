@@ -55,18 +55,22 @@
     padding: none;
   }
   .about-info {
+    align-items: center;
     grid-template-areas:
-      "bio-image" "bio"
+      "bio-image"
+      "bio"
       "job1"
       "job2"
       "job3"
-      "job4";
-
-    grid-template-columns: 1fr;
+      "job4"
+      "job5";
+    text-align: center;
+    //grid-template-columns: 1fr;
   }
 
   .bio-image-box {
-    align-self: center;
+    width: 100%;
+    align-items: center;
   }
 }
 @include mediaSm {
