@@ -8,16 +8,17 @@
 @import "base/typography";
 
 //@import "components/bg-video";
-//@import "components/button";
+@import "components/button";
 //@import "components/card";
 //@import "components/composition";
 @import "components/feature-box";
+@import "components/thumbnail";
 //@import "components/form";
 //@import "components/popup";
 //@import "components/story";
 
 //@import "layout/banner";
-//@import "layout/footer";
+@import "layout/footer";
 //@import "layout/grid";
 @import "layout/header";
 //@import "layout/home";
@@ -29,5 +30,7 @@
 
 @import "pages/home";
 @import "pages/about";
+@import "pages/projects";
+@import "pages/contact";
 
 @import "base/mobile";
