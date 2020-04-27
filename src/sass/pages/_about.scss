@@ -1,0 +1,44 @@
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bio-image bio bio"
+    "job1 job2 job3"
+    "job4 job4 job4";
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  .bio-image {
+    @include portrait;
+    grid-area: bio-image;
+    transform: scale(0.7, 0.7);
+    display: inline;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job {
+  }
+  .job1 {
+    grid-area: job1;
+  }
+  .job2 {
+    grid-area: job2;
+  }
+  .job3 {
+    grid-area: job3;
+  }
+  .job4 {
+    grid-area: job4;
+  }
+}
+
+#about-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 6rem;
+}

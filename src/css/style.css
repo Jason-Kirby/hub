@@ -26,6 +26,7 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 
+/*
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
@@ -49,34 +50,6 @@ $breakpoint argument choices:
   }
 }
 */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1.5rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1.5rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInButton {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 *,
 *::after,
 *::before {
@@ -92,7 +65,6 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #323232;
   color: #fff;
-  padding: 3rem;
   height: 100%;
   margin: 0;
   line-height: 1.7; }
@@ -109,6 +81,10 @@ body {
       height: 100%;
       background: rgba(16, 29, 44, 0.8);
       z-index: -1; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 6rem); }
 
 h1,
 h2,
@@ -128,6 +104,35 @@ h3 {
 a {
   text-decoration: none;
   color: #fff; }
+
+.text-secondary {
+  color: #deba59;
+  font-weight: 700;
+  font-size: 105%; }
+
+.feature-box {
+  background-color: rgba(50, 50, 50, 0.9);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  /* &__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #323232, #6b5f3f);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    //@include respond(tab-port) {
+    //  margin-bottom: 0;
+    //}
+  }
+*/ }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
 
 header {
   position: fixed;
@@ -158,8 +163,7 @@ header {
 .menu {
   position: fixed;
   top: 0;
-  width: 100%;
-  opacity: 0.9;
+  width: 100vw;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -178,20 +182,22 @@ header {
     background: #252525;
     list-style: none;
     transform: translate3d(0, -100%, 0);
+    background: rgba(50, 50, 50, 0.9);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #323232;
     transform: translate3d(0, 100%, 0);
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-out;
+    background: rgba(37, 37, 37, 0.9); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-portrait {
     width: 25rem;
     height: 25rem;
     float: left;
-    background: url("/src/img/Jason-0001.jpg");
+    background: url("/src/img/jk-profile-centered.jpg");
     border-radius: 50%;
     border: solid 3px #deba59;
     background-size: cover;
@@ -250,3 +256,87 @@ main {
 
 .text-secondary {
   color: #deba59; }
+
+.about-info {
+  display: grid;
+  grid-template-areas: "bio-image bio bio" "job1 job2 job3" "job4 job4 job4";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem; }
+  .about-info .bio-image {
+    width: 25rem;
+    float: left;
+    background: url("/src/img/jk-profile-centered.jpg");
+    border-radius: 50%;
+    border: solid 3px #deba59;
+    background-size: cover;
+    background-position: center;
+    grid-area: bio-image;
+    transform: scale(0.7, 0.7);
+    display: inline; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job1 {
+    grid-area: job1; }
+  .about-info .job2 {
+    grid-area: job2; }
+  .about-info .job3 {
+    grid-area: job3; }
+  .about-info .job4 {
+    grid-area: job4; }
+
+#about-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #191919;
+  color: #fff;
+  height: 6rem; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    font-size: 1rem;
+    padding: none; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    transition: all 0.6s ease-out;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    padding: none;
+    justify-items: top; }
+  .menu-branding {
+    height: 25vh !important;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.6s ease-out; }
+  .menu-portrait {
+    width: auto;
+    max-width: 150px;
+    height: auto;
+    max-height: 150px; }
+  .nav-link {
+    padding: none; }
+  .about-info {
+    grid-template-areas: "bio-image" "bio" "job1" "job2" "job3" "job4";
+    grid-template-columns: 1fr; }
+  .bio-image-box {
+    align-self: center; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1.lg-heading {
+    margin-top: 10vh; }
+  .nav-item {
+    font-size: 1rem !important;
+    padding: none; } }

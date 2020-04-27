@@ -51,6 +51,7 @@ $breakpoint argument choices:
 - tab-land
 - big-desktop
 
+/*
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
@@ -74,3 +75,37 @@ $breakpoint argument choices:
   }
 }
 */
+
+//Treversy media stops
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (inx-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  width: 25rem;
+  //height: 25rem;
+  float: left;
+  background: $profile-image;
+  border-radius: 50%;
+  border: solid 3px $secondary-color;
+  background-size: cover;
+  background-position: center;
+}

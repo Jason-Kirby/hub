@@ -32,12 +32,16 @@ body {
   //background-image: $home-image;
   font-family: $font-primary;
   background-color: $coal;
-  color: $primary-font-color;
-  padding: 3rem;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   line-height: 1.7;
   //@include respond(tab-port) {
   //  padding: 0;
   // }
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 6rem);
 }
