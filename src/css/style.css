@@ -149,6 +149,15 @@ li {
     background: #deba59;
     color: #000; }
 
+.btn-download {
+  text-align: center;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400; }
+
 .btn-dark {
   background: black;
   color: #fff; }
@@ -322,7 +331,7 @@ main {
 
 .about-info {
   display: grid;
-  grid-template-areas: "bio-image bio bio" "job1 job2 job3" "job4 job4 job4" "job5 job5 job5";
+  grid-template-areas: "bio-image bio bio" "job1 job2 job3" "job4 job4 job4" "job5 job5 job5" ". download .";
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem; }
   .about-info .bio-image {
@@ -349,6 +358,13 @@ main {
     grid-area: job4; }
   .about-info .job5 {
     grid-area: job5; }
+  .about-info .download {
+    grid-area: download; }
+
+.download {
+  text-align: center;
+  border-radius: 8px;
+  background-color: #777; }
 
 .project {
   display: grid;

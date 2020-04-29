@@ -4,7 +4,8 @@
     "bio-image bio bio"
     "job1 job2 job3"
     "job4 job4 job4"
-    "job5 job5 job5";
+    "job5 job5 job5"
+    ". download .";
 
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
@@ -21,8 +22,6 @@
     font-size: 1.5rem;
   }
 
-  .job {
-  }
   .job1 {
     grid-area: job1;
   }
@@ -38,4 +37,13 @@
   .job5 {
     grid-area: job5;
   }
+  .download {
+    grid-area: download;
+  }
+}
+
+.download {
+  text-align: center;
+  border-radius: 8px;
+  background-color: #777;
 }
